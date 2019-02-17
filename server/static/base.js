@@ -34,7 +34,6 @@ $( document ).ready(function(){
       name = $("#nameIN").val();
       func = $("#functionIN").val();
       $.get("/api/func/"+name+"/"+encodeURIComponent(func));
-      alert(encodeURIComponent(func))
     }
   });
 
