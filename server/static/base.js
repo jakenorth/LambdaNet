@@ -7,11 +7,12 @@ $( document ).ready(function(){
   $(".counter").click(count);
   $('select.dropdown').dropdown();
   $("#runBTN").click(function(){
-  	alert("You clicked it!");
   	funcName = $("#funcIN").val();
   	args = $("#argsIN").val();
   	$.get("/api/nametofunc/"+funcName, function(payload){
-  		$.get("/api/run/"+payload+"/"+args, function(result){
+  		alert("got payload")
+  		$.get("/api/run/"+payload, function(result){
+  			alert("done!")
   			alert(result);
   		});
   	});
