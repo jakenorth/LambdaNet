@@ -14,7 +14,7 @@ def host_home_route():
   return render_template("home.html")
 @app.route("/functions")
 def host_functions_route():
-  return render_template("functions.html")
+  return render_template("functions.html", functions=["a","b","c"])
 @app.route("/deploy")
 def host_deploy_route():
   return render_template("deploy.html")
