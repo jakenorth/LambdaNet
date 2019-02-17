@@ -2,28 +2,34 @@ function count(){
   $(".counter .value").load("/api/count");
 }
 
+function log(x){
+	$("#metaout").append("\n"+x);
+}
+
 $( document ).ready(function(){
-	$("#sendingLoader").hide();
   count();
   $(".counter").click(count);
   $('select.dropdown').dropdown();
   $("#runBTN").click(function(){
+
+  	log("Fetching lambda function from distribution server");
   	funcName = $("#funcIN").val();
   	args = $("#argsIN").val();
-  	$("#waitingLoader").hide();
-  	$("#sendingLoader").show();
+
   	$.get("/api/nametofunc/"+funcName, function(payload){
-  		
-  		if (args == ""){
+  		log("Retrieved lambda function");
+  		log("API Endpoint for remote execution: /api/run/"+payload+"/"+args)
+  		log("Sending to host");
+  		if (args == ""){ 
+  			log("- no arguments");
 	  		$.get("/api/run/"+encodeURIComponent(payload), function(result){
-	  			$("#sendingLoader").hide();
 	  			$("#out").html(result);
 	  		});
 	  	}
 	  	else {
+	  		log("- with arguments");
 	  		$.get("/api/run/"+encodeURIComponent(payload)+"/"+encodeURIComponent(args), function(result){
 	  			$("#out").html(result);
-	  			$("#sendingLoader").hide();	  		
 	  	})
 	  	}
   	});
