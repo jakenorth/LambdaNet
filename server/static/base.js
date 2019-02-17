@@ -40,8 +40,8 @@ $( document ).ready(function(){
     onApprove : function() {
       name = $("#nameIN").val();
       func = $("#functionIN").val();
-      $.get("/api/func/"+name+"/"+encodeURIComponent(func));
-      window.open("http://l.landin.ml/functions");
+      $.get("/api/func/"+name+"/"+encodeURIComponent(func), function(){window.open("http://l.landin.ml/functions", "_self");});
+      
     }
   });
 
