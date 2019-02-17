@@ -3,7 +3,7 @@
 <h1>Deploy</h1>
 <div class="ui form" action="">
 	<div class="field">
-		<label>Country</label>
+		<label>Function</label>
 		<select name="funcIN" class="ui search dropdown">
 			<option value="">Select Function</option>
 			{% for function in functions %}
@@ -15,6 +15,7 @@
 		<label>Arguments</label>
 		<input name="argsIN">
 	</div>
+	<input type="submit" class="ui button">
 </div>
 
 {% endblock %}
