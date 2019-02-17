@@ -1,10 +1,10 @@
 {% extends 'page.html' %}
 {% block page %}
 <h1>Deploy</h1>
-<div class="ui form" action="">
+<div class="ui form">
 	<div class="field">
 		<label>Function</label>
-		<select name="funcIN" class="ui search dropdown">
+		<select id="funcIN" class="ui search dropdown">
 			<option value="">Select Function</option>
 			{% for function in functions %}
 			<option value="{{function}}">{{function}}</option>
@@ -13,9 +13,9 @@
 	</div>
 	<div class="feild">
 		<label>Arguments</label>
-		<input name="argsIN">
+		<input id="argsIN">
 	</div>
-	<input type="submit" class="ui button">
+	<div id="#runBTN" class="ui button">Deploy</div>
 </div>
 
 {% endblock %}

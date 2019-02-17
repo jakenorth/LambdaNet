@@ -32,6 +32,10 @@ def host_deploy_route():
 queue = {}
 done = {}
 
+@app.route("/api/nametofunc/<name>")
+def nametofunc(name):
+  return open("static/functions/"+name).read()
+
 @app.route("/api/func/<name>/<function>")
 def newfunc(name, function):
   open("static/functions/"+name, "w+").write(function)
