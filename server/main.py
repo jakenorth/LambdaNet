@@ -25,7 +25,7 @@ def host_functions_route():
   return render_template("functions.html", functions=get_func_names())
 @app.route("/deploy")
 def host_deploy_route():
-  return render_template("deploy.html")
+  return render_template("deploy.html",functions=get_func_names())
 
 
 # API

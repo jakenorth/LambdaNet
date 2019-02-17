@@ -1,5 +1,16 @@
 {% extends 'page.html' %}
 {% block page %}
 <h1>Deploy</h1>
+<div class="ui form">
+	<div class="field">
+		<label>Country</label>
+		<select class="ui search dropdown">
+			<option value="">Select Function</option>
+			{% for function in functions %}
+			<option value="{{function}">{{function}}</option>
+			{% endfor %}
+		</select>
+	</div>
+</div>
 
 {% endblock %}

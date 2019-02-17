@@ -5,7 +5,7 @@ function count(){
 $( document ).ready(function(){
   count();
   $(".counter").click(count);
-
+  $('select.dropdown').dropdown();
   $('.ui.modal')
   .modal({
     onApprove : function() {
