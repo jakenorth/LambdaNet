@@ -9,7 +9,10 @@ $( document ).ready(function(){
   $('.ui.modal')
   .modal({
     onApprove : function() {
-      window.alert('Approved!');
+      name = $("#nameIN").value();
+      func = $("#functionIN").value();
+      alert(name);
+      alert(func);
     }
   });
 
