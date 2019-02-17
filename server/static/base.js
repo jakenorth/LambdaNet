@@ -12,7 +12,7 @@ $( document ).ready(function(){
       name = $("#nameIN").val();
       func = $("#functionIN").val();
       $.ajax*
-      alert(func);
+      $.get("/api/func/"+name+"/"+func)
     }
   });
 
