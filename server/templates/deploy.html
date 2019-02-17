@@ -17,8 +17,12 @@
 	</div>
 	<div id="runBTN" class="ui button">Deploy</div>
 </div>
-<div id="out">
-	<div class="ui indeterminate text loader">Waiting for command</div>
+
+<div class="ui segment" id="outbox">
+  <p id="out"></p>
+  <div class="ui active dimmer">
+    <div class="ui loader"></div>
+  </div>
 </div>
 
 {% endblock %}
