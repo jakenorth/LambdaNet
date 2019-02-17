@@ -10,8 +10,12 @@ $( document ).ready(function(){
   	alert("You clicked it!");
   	funcName = $("#funcIN").val();
   	args = $("#argsIN").val();
-  	alert(funcName);
-  	alert(args);
+  	$.get("/api/nametofunc/"+funcName, function(payload){
+  		$.get("/api/run/"+payload+"/"+args, function(result){
+  			alert(result);
+  		});
+  	});
+
   });
   $('.ui.modal')
   .modal({
