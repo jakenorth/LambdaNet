@@ -11,7 +11,10 @@ hosts = []
 os.system("rm -rf static/functions")
 
 def get_func_names():
-  return list(os.walk("static/functions"))[0][2]
+  try:
+    return list(os.walk("static/functions"))[0][2]
+  except:
+    return []
 
 # Client apps
 @app.route("/")
