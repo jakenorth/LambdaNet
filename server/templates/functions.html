@@ -1,11 +1,11 @@
 {% extends 'page.html' %}
 {% block page %}
 <h1>Your Functions:</h1>
-<div class="ui list" id="funclist">
+<ul>
 	{% for function in functions %}
-		<div class="item">{{ function }}</div>
+		<li>{{ function }}</li>
 	{% endfor %}
-</div>
+</ul>
 <a class="ui button" id="newfunc">New Function</a>
 
 

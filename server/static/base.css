@@ -34,3 +34,10 @@ body {
   border-style:solid !important;
   color:black;
 }
+
+ul {
+  background-color:lightgrey;
+}
+li {
+  border-style:solid;
+}
