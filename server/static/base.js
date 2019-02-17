@@ -18,8 +18,8 @@ $( document ).ready(function(){
 	  	else {
 	  		$.get("/api/run/"+payload+"/"+args, function(result){
 	  			$("#out").html(result);	  		
+	  	})
 	  	}
-	  }
   	});
 
   });
