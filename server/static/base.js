@@ -9,8 +9,8 @@ $( document ).ready(function(){
   $('.ui.modal')
   .modal({
     onApprove : function() {
-      name = $("#nameIN").value();
-      func = $("#functionIN").value();
+      name = $("#nameIN").val();
+      func = $("#functionIN").val();
       alert(name);
       alert(func);
     }
