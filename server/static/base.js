@@ -5,9 +5,15 @@ function count(){
 $( document ).ready(function(){
   count();
   $(".counter").click(count);
-  $('.ui.modal').onApprove(function(){
-  	alert("You approved it!")
-  })
+
+  $('.ui.modal')
+  .modal({
+    onApprove : function() {
+      window.alert('Approved!');
+    }
+  });
+
+
   $("#newfunc").click(function(){
   	$('.ui.modal')
   		.modal('show');
