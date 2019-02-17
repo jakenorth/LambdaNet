@@ -9,16 +9,20 @@ $( document ).ready(function(){
   $("#runBTN").click(function(){
   	funcName = $("#funcIN").val();
   	args = $("#argsIN").val();
+  	$("#waitingLoader").hide();
+  	$("#loadingLoader").show();
   	$.get("/api/nametofunc/"+funcName, function(payload){
-  		alert(payload);
+  		
   		if (args == ""){
 	  		$.get("/api/run/"+encodeURIComponent(payload), function(result){
+	  			$("#loadingLoader").hide();
 	  			$("#out").html(result);
 	  		});
 	  	}
 	  	else {
 	  		$.get("/api/run/"+encodeURIComponent(payload)+"/"+encodeURIComponent(args), function(result){
-	  			$("#out").html(result);	  		
+	  			$("#out").html(result);
+	  			$("#loadingLoader").hide();	  		
 	  	})
 	  	}
   	});
