@@ -8,7 +8,7 @@ import os
 app = Flask('app')
 CORS(app)
 hosts = []
-os.system("rm -rf static/functions")
+os.system("rm static/functions/*")
 
 def get_func_names():
   try:
