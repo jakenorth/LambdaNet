@@ -10,6 +10,7 @@ $( document ).ready(function(){
   	funcName = $("#funcIN").val();
   	args = $("#argsIN").val();
   	$.get("/api/nametofunc/"+funcName, function(payload){
+  		alert(payload);
   		if (args == ""){
 	  		$.get("/api/run/"+payload, function(result){
 	  			$("#out").html(result);
@@ -29,6 +30,7 @@ $( document ).ready(function(){
       name = $("#nameIN").val();
       func = $("#functionIN").val();
       $.get("/api/func/"+name+"/"+encodeURIComponent(func));
+      alert(encodeURIComponent(func))
     }
   });
 
