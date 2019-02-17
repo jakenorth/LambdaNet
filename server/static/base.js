@@ -11,7 +11,6 @@ $( document ).ready(function(){
   	args = $("#argsIN").val();
   	$.get("/api/nametofunc/"+funcName, function(payload){
   		alert("got payload");
-  		document.write(payload);
   		$.get("/api/run/"+payload, function(result){
   			alert("done!")
   			alert(result);
