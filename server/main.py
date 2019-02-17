@@ -8,7 +8,7 @@ app = Flask('app')
 CORS(app)
 hosts = []
 
-# Client app
+# Client apps
 @app.route("/")
 def host_home_route():
   return render_template("home.html")
