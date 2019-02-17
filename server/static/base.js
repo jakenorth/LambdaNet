@@ -3,6 +3,7 @@ function count(){
 }
 
 $( document ).ready(function(){
+	$("#sendingLoader").hide();
   count();
   $(".counter").click(count);
   $('select.dropdown').dropdown();
@@ -10,19 +11,19 @@ $( document ).ready(function(){
   	funcName = $("#funcIN").val();
   	args = $("#argsIN").val();
   	$("#waitingLoader").hide();
-  	$("#loadingLoader").show();
+  	$("#sendingLoader").show();
   	$.get("/api/nametofunc/"+funcName, function(payload){
   		
   		if (args == ""){
 	  		$.get("/api/run/"+encodeURIComponent(payload), function(result){
-	  			$("#loadingLoader").hide();
+	  			$("#sendingLoader").hide();
 	  			$("#out").html(result);
 	  		});
 	  	}
 	  	else {
 	  		$.get("/api/run/"+encodeURIComponent(payload)+"/"+encodeURIComponent(args), function(result){
 	  			$("#out").html(result);
-	  			$("#loadingLoader").hide();	  		
+	  			$("#sendingLoader").hide();	  		
 	  	})
 	  	}
   	});
