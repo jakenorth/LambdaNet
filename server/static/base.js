@@ -12,12 +12,12 @@ $( document ).ready(function(){
   	$.get("/api/nametofunc/"+funcName, function(payload){
   		alert(payload);
   		if (args == ""){
-	  		$.get("/api/run/"+payload, function(result){
+	  		$.get("/api/run/"+encodeURIComponent(payload), function(result){
 	  			$("#out").html(result);
 	  		});
 	  	}
 	  	else {
-	  		$.get("/api/run/"+payload+"/"+args, function(result){
+	  		$.get("/api/run/"+encodeURIComponent(payload)+"/"+encodeURIComponent(args), function(result){
 	  			$("#out").html(result);	  		
 	  	})
 	  	}
