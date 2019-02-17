@@ -27,9 +27,15 @@ def host_deploy_route():
 # API
 queue = {}
 done = {}
+
+@app.route("/api/func/<name>/<function>")
+def newfunc(name, function):
+  open("static/functions/"+name, "w+").write(function)
+
 @app.route("/api/count")
 def machine_count():
   return str(len(hosts))
+
 @app.route("/api/run/<funcStr>/<argStr>")
 @app.route("/api/run/<funcStr>")
 def run_route(funcStr, argStr=""):

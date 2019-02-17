@@ -11,7 +11,7 @@ $( document ).ready(function(){
     onApprove : function() {
       name = $("#nameIN").val();
       func = $("#functionIN").val();
-      alert(name);
+      $.ajax*
       alert(func);
     }
   });
