@@ -31,6 +31,7 @@ done = {}
 @app.route("/api/func/<name>/<function>")
 def newfunc(name, function):
   open("static/functions/"+name, "w+").write(function)
+  return "Done!"
 
 @app.route("/api/count")
 def machine_count():
