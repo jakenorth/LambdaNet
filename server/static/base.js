@@ -24,8 +24,8 @@ $( document ).ready(function(){
     onApprove : function() {
       name = $("#nameIN").val();
       func = $("#functionIN").val();
-      $.get("/api/func/"+name+"/"+func);
-      document.write(func);
+      $.get("/api/func/"+name+"/"+encodeURIComponent(func));
+      alert(encodeURIComponent(func))
     }
   });
 
