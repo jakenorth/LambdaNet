@@ -4,9 +4,13 @@ from flask_cors import *
 import random
 import string
 import time
+import os
 app = Flask('app')
 CORS(app)
 hosts = []
+
+def get_func_names():
+  return os.walk("static/functions")
 
 # Client apps
 @app.route("/")
