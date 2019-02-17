@@ -20,11 +20,3 @@ body {
   margin: 0px !important;
   font-size: 30px !important;
 }
-
-ul {
-  border-radius:10px;
-  list-style-type: none;
-}
-li:hover {
-  background-color:lightgrey;
-}
