@@ -7,6 +7,7 @@ $( document ).ready(function(){
   $(".counter").click(count);
   $('select.dropdown').dropdown();
   $("#runBTN").click(function(){
+  	alert("You clicked it!");
   	funcName = $("#funcIN").val();
   	args = $("#argsIN").val();
   	alert(funcName);
