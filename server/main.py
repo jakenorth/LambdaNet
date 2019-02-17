@@ -34,6 +34,7 @@ done = {}
 
 @app.route("/api/nametofunc/<name>")
 def nametofunc(name):
+  print(open("static/functions/"+name).read())
   return open("static/functions/"+name).read()
 
 @app.route("/api/func/<name>/<function>")
