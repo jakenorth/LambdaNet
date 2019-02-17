@@ -10,9 +10,16 @@ $( document ).ready(function(){
   	funcName = $("#funcIN").val();
   	args = $("#argsIN").val();
   	$.get("/api/nametofunc/"+funcName, function(payload){
-  		$.get("/api/run/"+payload, function(result){
-  			$("#out").html(result);
-  		});
+  		if (args == ""){
+	  		$.get("/api/run/"+payload, function(result){
+	  			$("#out").html(result);
+	  		});
+	  	}
+	  	else {
+	  		$.get("/api/run/"+payload+"/"+args, function(result){
+	  			$("#out").html(result);	  		
+	  	}
+	  }
   	});
 
   });
