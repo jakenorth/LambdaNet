@@ -39,6 +39,7 @@ def nametofunc(name):
 
 @app.route("/api/func/<name>/<function>")
 def newfunc(name, function):
+  print(function)
   open("static/functions/"+name, "w+").write(function)
   return "Done!"
 
