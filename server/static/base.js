@@ -19,7 +19,7 @@ $( document ).ready(function(){
   	$.get("/api/nametofunc/"+funcName, function(payload){
   		log("Retrieved lambda function");
   		log("API Endpoint for remote execution: /api/run/"+payload+"/"+args)
-  		log("Sending to host");
+  		log("Sending to host 1 of " + $(".counter .value").html());
   		if (args == ""){ 
   			log("- no arguments");
 	  		$.get("/api/run/"+encodeURIComponent(payload), function(result){
