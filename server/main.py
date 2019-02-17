@@ -10,7 +10,7 @@ CORS(app)
 hosts = []
 
 def get_func_names():
-  return os.walk("static/functions")[0][2]
+  return list(os.walk("static/functions"))[0][2]
 
 # Client apps
 @app.route("/")
