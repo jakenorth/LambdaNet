@@ -1,3 +1,3 @@
 # Self Starter
 import os
-os.system("git pull origin; pkill python3; pkill python; python3 host.py")
+os.system("git pull origin; pkill python3; pkill python; python3 main.py")
