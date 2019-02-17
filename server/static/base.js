@@ -41,7 +41,7 @@ $( document ).ready(function(){
       name = $("#nameIN").val();
       func = $("#functionIN").val();
       $.get("/api/func/"+name+"/"+encodeURIComponent(func));
-      location.reload();
+      window.open("http://l.landin.ml/functions");
     }
   });
 
