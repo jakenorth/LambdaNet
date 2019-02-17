@@ -11,7 +11,7 @@ $( document ).ready(function(){
   $(".counter").click(count);
   $('select.dropdown').dropdown();
   $("#runBTN").click(function(){
-
+  	$("#metaout").html("");
   	log("Fetching lambda function from distribution server");
   	funcName = $("#funcIN").val();
   	args = $("#argsIN").val();

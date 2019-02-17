@@ -37,6 +37,7 @@ body {
 
 ul {
   background-color:lightgrey;
+  list-style-type:none;
 }
 li {
   border-style:solid;
